@@ -1,0 +1,13 @@
+com\exemplo\ingressos\repository\IngressoRepository.class
+com\exemplo\ingressos\controller\IngressoController.class
+com\exemplo\ingressos\service\EventoService.class
+com\exemplo\ingressos\model\Evento.class
+com\exemplo\ingressos\controller\VendaIngressoController.class
+com\exemplo\ingressos\repository\EventoRepository.class
+com\exemplo\ingressos\controller\EventoController.class
+com\exemplo\ingressos\repository\CompraRepository.class
+com\exemplo\ingressos\model\Ingresso.class
+com\exemplo\ingressos\service\IngressoService.class
+com\exemplo\ingressos\service\VendaIngressoService.class
+com\exemplo\ingressos\VendaIngressosApplication.class
+com\exemplo\ingressos\model\Compra.class

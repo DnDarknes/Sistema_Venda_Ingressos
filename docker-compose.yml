@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15
+    container_name: ingressos_db
+    environment:
+      POSTGRES_USER: ingressos_user
+      POSTGRES_PASSWORD: senha123
+      POSTGRES_DB: ingressos_db
+    ports:
+      - 5432:5432
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
