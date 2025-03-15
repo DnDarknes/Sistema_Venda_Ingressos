@@ -40,10 +40,6 @@ public class VendaIngressoService {
         this.ingressoUnicoRepository = ingressoUnicoRepository;
     }
 
-    /**
-     * Método para realizar a compra de um ingresso.
-     * Envia um e-mail de confirmação de compra após a conclusão.
-     */
     public String comprarIngresso(Long ingressoId, String compradorNome, String compradorEmail, Integer quantidade) {
         Ingresso ingresso = ingressoRepository.findById(ingressoId).orElse(null);
         if (ingresso == null) {
@@ -113,9 +109,7 @@ public class VendaIngressoService {
         return "Ingresso validado com sucesso!";
     }
 
-    /**
-     * Método para verificar se existe e a situação do ingresso.
-     */
+
     public String verificarStatusIngresso(Long ingressoId) {
         // Verifica se o ingresso existe
         Ingresso ingresso = ingressoRepository.findById(ingressoId).orElse(null);
@@ -126,7 +120,6 @@ public class VendaIngressoService {
         return "Status do ingresso: " + ingresso.getStatus();
     }
 
-    //Envia um e-mail de confirmação de compra para o usuário.
 
     private void enviarEmailConfirmacaoCompra(String destinatario, String ingressoNome, int quantidade) {
         SimpleMailMessage mensagem = new SimpleMailMessage();
@@ -136,7 +129,6 @@ public class VendaIngressoService {
         mailSender.send(mensagem);
     }
 
-    //Confirma o pagamento de uma compra e envia um e-mail de confirmação.
 
     public void confirmarPagamento(Long compraId) {
         Compra compra = compraRepository.findById(compraId).orElse(null);
@@ -145,7 +137,6 @@ public class VendaIngressoService {
         }
     }
 
-    //Envia um e-mail de confirmação de pagamento para o usuário.
 
     private void enviarEmailConfirmacaoPagamento(String destinatario, String ingressoNome) {
         SimpleMailMessage mensagem = new SimpleMailMessage();

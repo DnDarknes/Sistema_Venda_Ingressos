@@ -12,5 +12,3 @@ public class VendaIngressosApplication {
 		SpringApplication.run(VendaIngressosApplication.class, args);
 	}
 }
-//ponto de partida de execução da aplicação
-//add as notaçoes @EntityScan e @EnablesJPA para o spring reconhecer

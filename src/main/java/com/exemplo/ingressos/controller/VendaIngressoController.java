@@ -36,15 +36,12 @@ public class VendaIngressoController {
         String resultado = vendaIngressoService.validarIngresso(codigoIngresso);
         return ResponseEntity.ok(resultado);
     }
-
-    // Consultar todas as compras feitas por um usuário
     @GetMapping("/consultar-compras")
     public ResponseEntity<List<Compra>> consultarCompras(@RequestParam String email) {
         List<Compra> compras = vendaIngressoService.consultarComprasPorEmail(email);
         return ResponseEntity.ok(compras);
     }
 
-    // Consultar apenas as compras para eventos futuros
     @GetMapping("/consultar-compras-futuras")
     public ResponseEntity<List<Compra>> consultarComprasFuturas(@RequestParam String email) {
         List<Compra> comprasFuturas = vendaIngressoService.consultarComprasFuturasPorEmail(email);

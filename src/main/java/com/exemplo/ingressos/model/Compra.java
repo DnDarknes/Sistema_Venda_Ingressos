@@ -96,7 +96,7 @@ public class Compra {
     public void setIngressosUnicos(List<IngressoUnico> ingressosUnicos) {
         this.ingressosUnicos = ingressosUnicos;
         for (IngressoUnico ingressoUnico : ingressosUnicos) {
-            ingressoUnico.setCompra(this); // Garante a referência bidirecional
+            ingressoUnico.setCompra(this); // Garante a referência
         }
     }
 

@@ -11,15 +11,15 @@ public class IngressoUnico {
     private Long id;
 
     @Column(unique = true, nullable = false)
-    private String codigo; // UUID do ingresso
+    private String codigo; // UUID
 
     @ManyToOne
     @JoinColumn(name = "compra_id", nullable = false)
     private Compra compra;
 
-    private boolean utilizado = false; // Flag para saber se já foi usado
+    private boolean utilizado = false;
 
-    private LocalDateTime dataUso; // Data e hora da validação
+    private LocalDateTime dataUso;
 
     public Long getId() {
         return id;

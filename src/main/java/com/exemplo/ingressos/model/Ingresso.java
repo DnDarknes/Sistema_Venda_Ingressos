@@ -12,13 +12,13 @@ public class Ingresso {
     private Long id;
 
     @Column(nullable = false)
-    private String tipo; // define se é VIP, pista ou camarote...
+    private String tipo;
 
     @Column(nullable = false)
     private Double preco;
 
     @Column(nullable = false)
-    private String status; // disponível, vendido...
+    private String status;
 
     @ManyToOne
     @JoinColumn(name = "evento_id", nullable = false)
@@ -28,10 +28,10 @@ public class Ingresso {
     private LocalDate data;
 
     @Column(nullable = false)
-    private Integer quantidade; // armazena a qtd de ingressos
+    private Integer quantidade;
 
     @Column(nullable = false)
-    private String restricaoPublico; // restrição de público (ex: estudante, PCD, idoso)
+    private String restricaoPublico;
 
 
     public Long getId() {

@@ -12,7 +12,7 @@ public class IngressoService {
     private IngressoRepository ingressoRepository;
 
     public Ingresso criarIngresso(Ingresso ingresso) {
-        // Lógica de validação ou outras operações
+
         return ingressoRepository.save(ingresso);
     }
 
